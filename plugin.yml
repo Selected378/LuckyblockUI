@@ -1,0 +1,7 @@
+name: Form
+author: Selected378
+main: Form\Main
+api: [4.O.O, 5.0.0]
+version: 1.0.0
+depend: 
+  -  FormAPI
