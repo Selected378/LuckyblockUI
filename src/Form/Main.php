@@ -2,7 +2,7 @@
 
 namespace Form;
 
-use Form\Commands\infoCommand;
+use Form\infoCommand;
 use Form\Events\EventsListener;
 use pocketmine\event\Listener;
 use pocketmine\plugin\Plugin;
@@ -21,6 +21,8 @@ class Main extends PluginBase implements Listener {
 
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getServer()->getPluginManager()->registerEvents(new EventsListener($this), $this);
+        $this->getServer()->getCommandMap()->register("info",new infoCommand($this));
+
     }
 
     public static function getInstance() {
